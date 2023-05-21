@@ -130,11 +130,24 @@ class ShopView(ListView):
     template_name = "shop.html"
 
 class AboutView(View):
-    # template_name = "about.html"
     def get(self, *args, **kwargs):
-        # category = Category.objects.get(slug=self.kwargs['slug'])
-        # item = Item.objects.filter(category=category, is_active=True)
-        return render(self.request, "about.html")
+        return render(self.request, "about.html")   
+
+class KrishnaView(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "krishna.html") 
+    
+class JyotishView(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "jyotish.html") 
+
+class AlpanaView(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "alpana.html")         
+
+class ShibaniView(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "shibani.html")    
 
 class ItemDetailView(DetailView):
     model = Item

@@ -1,6 +1,10 @@
 from django.urls import path
 from .views import (
     AboutView,
+    KrishnaView,
+    JyotishView,
+    AlpanaView,  
+    ShibaniView,
     ItemDetailView,
     HomeView,
     add_to_cart,
@@ -27,6 +31,10 @@ urlpatterns = [
     path('remove-from-cart/<slug>/', remove_from_cart, name='remove-from-cart'),
     path('shop/', ShopView.as_view(), name='shop'),
     path('about/', AboutView.as_view(), name='about'),
+    path('krishna/', KrishnaView.as_view(), name='krishna'),
+    path('jyotish/', JyotishView.as_view(), name='jyotish'),
+    path('alpana/', AlpanaView.as_view(), name='alpana'),
+    path('shibani/', ShibaniView.as_view(), name='shibani'),
     path('order-summary/', OrderSummaryView.as_view(), name='order-summary'),
     path('remove-item-from-cart/<slug>/', remove_single_item_from_cart,
          name='remove-single-item-from-cart'),
