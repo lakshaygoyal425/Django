@@ -44,7 +44,7 @@
 				</div>
 			</div>
 
-			<div class="wrap_header">
+			<div class="wrap_header" style="background: #B35041;">
 				<!-- Logo -->
 				<a href="/" class="logo">
 					<p style="color: black; "><b style="font-size: 35px;">ANOKHI</b></p>
@@ -55,18 +55,18 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="/">Home</a>
+								<a href="/"><b>Home</b></a>
 
 							</li>
 
 							<li>
-								<a href="/shop/">Shop</a>
+								<a href="/shop/"><b>Shop</b></a>
 							</li>
 
 							<li>
 								<div class="dropdown">
 									<button class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									  Artisans <span class="arrow"></span>
+									  <b>Artisans</b> <span class="arrow"></span>
 									</button>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 									  <a class="dropdown-item" href="/krishna/">Krishna Basak</a>
@@ -88,7 +88,7 @@
 							</li>
 
 							<li>
-								<a href="/about/">About</a>
+								<a href="/about/"><b>About</b></a>
 							</li>
 
 
@@ -96,17 +96,17 @@
 
 							{% if request.user.is_authenticated %}
 							<li>
-								<a href="{% url 'core:order-summary' %}">Cart<span class="badge badge-dark">{{ request.user|cart_item_count }}</span></a>
+								<a href="{% url 'core:order-summary' %}"><b>Cart</b><span class="badge badge-dark">{{ request.user|cart_item_count }}</span></a>
 							</li>
 							<li>
-								<a href="{% url 'account_logout' %}">Logout</a>
+								<a href="{% url 'account_logout' %}"><b>Logout</b></a>
 							</li>
 							{% else %}
 							<li>
-								<a href="#">Login</a>
+								<a href="#"><b>Login</b></a>
 								<ul class="sub_menu">
-									<li><a href="{% url 'account_login' %}">Login</a></li>
-									<li><a href="{% url 'account_signup' %}">SignUp</a></li>
+									<li><a href="{% url 'account_login' %}"><b>Login</b></a></li>
+									<li><a href="{% url 'account_signup' %}"><b>SignUp</b></a></li>
 								</ul>
 							</li>
 							{% endif %}
